@@ -2,19 +2,28 @@ library(circlize)
 library(StructuralVariantAnnotation)
 
 #list of file names
-file_names <- read.table("file_names.txt")
+
+##############################
+### ADD TXT FILE NAME HERE ###
+##############################
+## TXT FILE AND VCFS NEED TO BE IN THE SAME DIRECTORY AND FOLDER AS THIS SCRIPT ##
+file_names <- read.table("[txtfile with sample file names here]")
 
 
 for (row in 1:nrow(file_names)){
 
 file_name <- file_names[row,1]
 pdf_name <- paste(file_name, ".pdf", sep="")
-pdf_location <- paste("C:/Users/jayvi/Desktop/De Lab/Circos/data/", pdf_name, sep="")
+
+#####################
+### ADD PATH HERE ### 
+#####################
+pdf_location <- paste("[add path here]", pdf_name, sep="")
 
 
 #converts vcf to GRanges
 gRange_raw_data <- pairs2breakpointgr(rtracklayer::import(file_name))
-#print(gRange_raw_data)
+
 
 #del -> pairs
 gRange_del_data <- subset(gRange_raw_data, gRange_raw_data$NA. == "DEL")
