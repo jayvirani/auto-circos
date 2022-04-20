@@ -4,4 +4,8 @@ _auto-circos_ is a script that allows users to create circos plots for many samp
 
 # Package Requirements
 
-_auto_circos_ requires the [Circlize Package](https://jokergoo.github.io/circlize_book/book/) and the [Structual Variant Annotation Package](https://www.bioconductor.org/packages/release/bioc/html/StructuralVariantAnnotation.html). Documentation is linked for both.
+_auto_circos_ requires the [Circlize Package](https://jokergoo.github.io/circlize_book/book/) and the [Structual Variant Annotation Package](https://www.bioconductor.org/packages/release/bioc/html/StructuralVariantAnnotation.html). Documentation is linked.
+
+# Example Circos
+
+![Circos](Circos.png)
